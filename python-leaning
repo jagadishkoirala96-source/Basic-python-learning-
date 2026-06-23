@@ -1,40 +1,49 @@
-//Python
-high-level, interpreted, general-purpose programming language
-created by Guido van Rossum in 1991
 
-//Basic concept of Python
-1. Variables
+## Python
+
+Python is a **high-level, interpreted, general-purpose programming language** created by **Guido van Rossum** in **1991**.
+
+# Basic Concepts of Python
+
+## 1. Variables
+
 Variables store data values.
 
-Example:
+### Example
 name = "Ram"
 age = 20
-name stores a string.
-age stores an integer.
+* `name` stores a string.
+* `age` stores an integer.
 
-2. Data Types
+
+## 2. Data Types
+
 Python has several built-in data types:
 
-Data Type	Example
-int	10
-float	10.5
-str	"Hello"
-bool	True, False
-list	[1, 2, 3]
-tuple	(1, 2, 3)
-set	{1, 2, 3}
-dict	{"name":"Ram"}
+| Data Type | Example        |
+| --------- | -------------- |
+| int       | 10             |
+| float     | 10.5           |
+| str       | "Hello"        |
+| bool      | True, False    |
+| list      | [1, 2, 3]      |
+| tuple     | (1, 2, 3)      |
+| set       | {1, 2, 3}      |
+| dict      | {"name":"Ram"} |
 
-Example:
+### Example
 x = 10
 y = 3.14
 name = "Python"
 status = True
 
-3. Operators
+
+
+## 3. Operators
 Used to perform operations on values.
 
-Arithmetic Operators
+### Arithmetic Operators
+
 a = 10
 b = 5
 print(a + b)  # 15
@@ -42,44 +51,68 @@ print(a - b)  # 5
 print(a * b)  # 50
 print(a / b)  # 2.0
 
-4. Input and Output
-Input
+
+## 4. Input and Output
+
+### Input
 name = input("Enter your name: ")
-Output
+
+### Output
 print("Hello", name)
 
-5. Conditional Statements
+
+## 5. Conditional Statements
+
 Used for decision making.
+
+```python
 age = 18
+
 if age >= 18:
     print("Adult")
 else:
     print("Minor")
+```
 
-6. Loops
-For Loop
+---
+
+## 6. Loops
+
+### For Loop
 for i in range(5):
     print(i)
-While Loop
+```
+
+### While Loop
+
 count = 1
 while count <= 5:
     print(count)
     count += 1
 
-7. Functions
+
+## 7. Functions
+
 Functions are reusable blocks of code.
 
 def greet(name):
     return f"Hello {name}"
+
 print(greet("Ram"))
 
-8. Lists
+
+## 8. Lists
+
 Store multiple values in one variable.
 
 fruits = ["Apple", "Banana", "Mango"]
 print(fruits[0])
+```
 
-9. Dictionaries
+---
+
+## 9. Dictionaries
+
 Store data in key-value pairs.
 
 student = {
@@ -88,91 +121,122 @@ student = {
 }
 print(student["name"])
 
-10. Classes and Objects (OOP)
-Python supports Object-Oriented Programming.
+---
 
+## 10. Classes and Objects (OOP)
+
+Python supports Object-Oriented Programming.
+Example:
 class Student:
     def __init__(self, name):
         self.name = name
+
 s1 = Student("Ram")
 print(s1.name)
 
 
-//Python Libraries and Packages
-1. Library
-A library is a collection of pre-written Python code (modules and packages) that provides reusable functionality for specific tasks. Libraries help developers avoid writing code from scratch.
+# Python Libraries and Packages
 
-Examples of Python Libraries
-math – Mathematical functions
-random – Random number generation
-datetime – Date and time operations
-numpy – Numerical computing
-pandas – Data analysis
-matplotlib – Data visualization
+## 1. Library
 
-Example
+A library is a collection of pre-written Python code (modules and packages) that provides reusable functionality for specific tasks.
+
+### Examples of Python Libraries
+
+* `math` – Mathematical functions
+* `random` – Random number generation
+* `datetime` – Date and time operations
+* `numpy` – Numerical computing
+* `pandas` – Data analysis
+* `matplotlib` – Data visualization
+
+### Example
 import math
 print(math.sqrt(25))
+```
 
-//Importance of Libraries
-Saves development time
-Reduces code duplication
-Provides tested and optimized code
-Adds advanced functionality easily
+### Importance of Libraries
 
-2. Package
-A package is a way of organizing related Python modules into a directory structure. A package helps manage large projects by grouping similar modules together.
-Structure of a Package
+* Saves development time
+* Reduces code duplication
+* Provides tested and optimized code
+* Adds advanced functionality easily
+
+---
+
+## 2. Package
+
+A package is a way of organizing related Python modules into a directory structure.
+
+### Package Structure
+
+```text
 mypackage/
-│
 ├── __init__.py
 ├── module1.py
 └── module2.py
-mypackage → Package
-module1.py, module2.py → Modules
-__init__.py → Marks the directory as a package (optional in modern Python, but commonly used)
+```
 
-Example
-calculator.py
+* `mypackage` → Package
+* `module1.py`, `module2.py` → Modules
+* `__init__.py` → Marks the directory as a package
+
+### Example
+
+**calculator.py**
 def add(a, b):
     return a + b
-main.py
+```
+
+**main.py**
 from calculator import add
 print(add(5, 3))
 
-//Module
+
+# Module
+
 A module is a single Python file containing functions, classes, and variables.
 
-Example:
-# math_operations.py
+### Example
 def add(a, b):
     return a + b
 
-Virtual Environment (venv)
-A Virtual Environment (venv) is an isolated Python environment that allows you to install packages for a specific project without affecting the global Python installation or other projects.
 
-Why Use venv?
-Keeps project dependencies separate.
-Avoids version conflicts between projects.
-Makes projects easier to share and deploy.
-Prevents accidental modification of global packages
+# Virtual Environment (venv)
 
-Common Special Methods
-1. __init__()
+A Virtual Environment (`venv`) is an isolated Python environment that allows you to install packages for a specific project without affecting the global Python installation.
+
+## Why Use venv?
+
+* Keeps project dependencies separate
+* Avoids version conflicts between projects
+* Makes projects easier to share and deploy
+* Prevents accidental modification of global packages
+
+---
+
+# Common Special Methods
+
+## 1. `__init__()`
+
 Called automatically when an object is created.
 
 class Student:
     def __init__(self, name):
         self.name = name
+
 s = Student("Ram")
 print(s.name)
+```
 
-Output:
+**Output**
 Ram
 
-Purpose: Initialize object attributes.
+**Purpose:** Initialize object attributes.
 
-2. __str__()
+
+## 2. `__str__()`
+
 Returns a human-readable string representation of an object.
 
 class Student:
@@ -181,15 +245,19 @@ class Student:
 
     def __str__(self):
         return f"Student: {self.name}"
+
 s = Student("Ram")
 print(s)
 
-Output:
+
+**Output**
 Student: Ram
 
-Purpose: Controls what print(object) displays.
+**Purpose:** Controls what `print(object)` displays.
 
-3. __repr__()
+
+## 3. `__repr__()`
+
 Returns an official string representation of an object.
 
 class Student:
@@ -199,24 +267,28 @@ class Student:
 s = Student()
 print(repr(s))
 
-Output:
+**Output**
 Student()
 
-4. __len__()
-Defines behavior for len().
+
+## 4. `__len__()`
+
+Defines behavior for `len()`.
 
 class Team:
     def __len__(self):
         return 5
-
 t = Team()
 print(len(t))
+```
 
-Output:
+**Output**
 5
 
-5. __add__()
-Defines behavior for the + operator.
+
+## 5. `__add__()`
+
+Defines behavior for the `+` operator.
 
 class Number:
     def __init__(self, value):
@@ -224,15 +296,20 @@ class Number:
 
     def __add__(self, other):
         return self.value + other.value
+
 a = Number(10)
 b = Number(20)
-print(a + b)
 
-Output:
+print(a + b)
+```
+
+**Output**
 30
 
-6. __eq__()
-Defines behavior for ==.
+
+## 6. `__eq__()`
+
+Defines behavior for `==`.
 
 class Student:
     def __init__(self, age):
@@ -245,26 +322,27 @@ s1 = Student(20)
 s2 = Student(20)
 print(s1 == s2)
 
-Output:
+**Output**
 True
 
-//Polymorphism in Python
-Polymorphism means “many forms”. In Python, it refers to the ability of the same function, operator, or method to behave differently in different situations.
+# Polymorphism in Python
 
-In simple words: One name, many behaviors.
+Polymorphism means **"many forms"**.
 
-1. Function Polymorphism
+One function, method, or operator can behave differently in different situations.
 
-A single function works with different data types.
+## 1. Function Polymorphism
 
 print(len("Hello"))
 print(len([1, 2, 3]))
-Output:
+```
+
+**Output**
 5
 3
 
-2. Method Polymorphism
-Different classes can have methods with the same name but different behavior.
+
+## 2. Method Polymorphism
 
 class Dog:
     def sound(self):
@@ -279,69 +357,27 @@ animals = [Dog(), Cat()]
 for a in animals:
     print(a.sound())
 
-Output:
+
+**Output**
 Bark
 Meow
 
-3. Operator Polymorphism
 
-Same operator behaves differently based on data type.
-print(10 + 20)        # addition
-print("Hi" + " Python")  # concatenation
+## 3. Operator Polymorphism
 
-Output:
+print(10 + 20)
+print("Hi" + " Python")
+
+**Output**
 30
 Hi Python
+```
 
-Polymorphism:
-Same function/method/operator
-Different behavior in different cases
+# Inheritance in Python
 
-//Multiple Inheritance in Python
-Multiple inheritance means a class can inherit from more than one parent class.
+Inheritance allows a child class to acquire properties and methods from a parent class.
 
-In simple words: One child class has multiple parents.
-
-Example
-class Father:
-    def skill1(self):
-        return "Driving"
-
-class Mother:
-    def skill2(self):
-        return "Cooking"
-
-class Child(Father, Mother):
-    def skill3(self):
-        return "Gaming"
-
-c = Child()
-print(c.skill1())
-print(c.skill2())
-print(c.skill3())
-
-Output:
-Driving
-Cooking
-Gaming
-
-Multiple Inheritance:
-One class inherits from multiple classes
-Reuses features from more than one parent
-
-
-//Inheritance in Python
-Inheritance is an Object-Oriented Programming (OOP) concept that allows a class (child class) to acquire the properties and methods of another class (parent class).
-
-In simple words: Inheritance allows code reuse by creating a new class based on an existing class.
-
-Why Use Inheritance?
-Reuse existing code
-Reduce code duplication
-Improve maintainability
-Establish relationships between classes
-
- Example
+## Example
 class Animal:
     def eat(self):
         print("Animal is eating")
@@ -352,16 +388,18 @@ class Dog(Animal):
 
 d = Dog()
 
-d.eat()   # Inherited from Animal
-d.bark()  # Defined in Dog
+d.eat()
+d.bark()
+```
 
-Output:
+**Output**
 Animal is eating
 Dog is barking
 
-//Types of Inheritance in Python
-1. Single Inheritance
-One child inherits from one parent.
+
+# Types of Inheritance
+
+## 1. Single Inheritance
 
 class Parent:
     def show(self):
@@ -372,14 +410,9 @@ class Child(Parent):
 
 c = Child()
 c.show()
-Diagram
-Parent
-   │
-   ▼
- Child
 
-2. Multilevel Inheritance
-A child inherits from a class that itself inherited from another class.
+
+## 2. Multilevel Inheritance
 
 class GrandParent:
     def gp(self):
@@ -393,17 +426,9 @@ class Child(Parent):
 
 c = Child()
 c.gp()
-Diagram
-GrandParent
-     │
-     ▼
-   Parent
-     │
-     ▼
-    Child
 
-3. Multiple Inheritance
-A child inherits from more than one parent.
+
+## 3. Multiple Inheritance
 
 class Father:
     def drive(self):
@@ -420,13 +445,9 @@ c = Child()
 
 c.drive()
 c.cook()
-Diagram
-Father ──┐
-          ├──► Child
-Mother ──┘
 
-4. Hierarchical Inheritance
-Multiple child classes inherit from one parent.
+
+## 4. Hierarchical Inheritance
 
 class Parent:
     def show(self):
@@ -437,14 +458,9 @@ class Child1(Parent):
 
 class Child2(Parent):
     pass
-Diagram
-        Parent
-        /    \
-       ▼      ▼
-   Child1   Child2
+`
 
-5. Hybrid Inheritance
-Combination of two or more inheritance types.
+## 5. Hybrid Inheritance
 
         A
        / \
@@ -452,17 +468,12 @@ Combination of two or more inheritance types.
        \ /
         D
 
-Method Overriding in Python
-Method Overriding occurs when a child class provides its own implementation of a method that already exists in the parent class.
 
-In simple words: The child class replaces the parent's version of a method with its own version.
+# Method Overriding in Python
 
-Why Use Method Overriding?
-To customize inherited behavior.
-To provide a specific implementation in the child class.
-To achieve runtime polymorphism.
+Method Overriding occurs when a child class provides its own implementation of a method already defined in the parent class.
 
-Basic Example
+### Example
 class Animal:
     def sound(self):
         print("Animal makes a sound")
@@ -470,34 +481,41 @@ class Animal:
 class Dog(Animal):
     def sound(self):
         print("Dog barks")
+
 d = Dog()
 d.sound()
+```
 
-Output
+**Output**
 Dog barks
 
-//Encapsulation in Python
-Encapsulation is the process of wrapping data (variables) and methods (functions) together into a single unit (class) and restricting direct access to some data.
 
-In simple words: Encapsulation means hiding data and controlling how it is accessed.
+# Encapsulation in Python
 
-Real-Life Example:
-Think of an ATM machine
-You can withdraw money using buttons.
-You cannot directly access the bank's internal data.
+Encapsulation is the process of wrapping data and methods together into a single unit (class) and restricting direct access to some data.
 
-This is encapsulation: data is hidden, and access is provided through methods.
+### Real-Life Example
 
-Example of Encapsulation
+ATM Machine:
+
+* You can withdraw money using buttons.
+* You cannot directly access the bank's internal data.
+
+This is encapsulation.
+
+### Example
 class Student:
     def __init__(self, name, age):
-        self.name = name      # Public attribute
+        self.name = name
         self.age = age
 
     def display(self):
         print(self.name, self.age)
+
 s = Student("Ram", 20)
 s.display()
+```
 
-Output:
+**Output**
 Ram 20
+```
